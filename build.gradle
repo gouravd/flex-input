@@ -15,6 +15,7 @@ buildscript {
         junitVersion = '4.12'
 
         // 3rd party libs
+        cameraKitVersion = '0.13.1'
         frescoVersion = '1.7.1'
     }
 

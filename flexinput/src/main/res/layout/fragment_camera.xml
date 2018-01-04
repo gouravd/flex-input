@@ -19,16 +19,29 @@
             android:fillViewport="true"
             android:scrollbars="none">
 
-            <com.google.android.cameraview.CameraView
-                android:id="@+id/camera_view"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:gravity="center"
-                app:autoFocus="true"
-                app:facing="back"
-                app:flash="auto"/>
+                android:layout_height="wrap_content">
+
+                <com.wonderkiln.camerakit.CameraView
+                    android:id="@+id/camera_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    app:ckCropOutput="false"
+                    app:ckDoubleTapToToggleFacing="false"
+                    app:ckFacing="back"
+                    app:ckFlash="auto"
+                    app:ckFocus="tapWithMarker"
+                    app:ckJpegQuality="100"
+                    app:ckMethod="standard"
+                    app:ckPermissions="picture"
+                    app:ckPinchToZoom="true"
+                    app:ckVideoQuality="highest"
+                    app:ckZoom="1.0" />
+            </FrameLayout>
         </ScrollView>
 
         <android.support.v7.widget.AppCompatImageButton

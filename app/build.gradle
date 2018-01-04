@@ -51,6 +51,7 @@ dependencies {
 
     implementation "com.facebook.fresco:fresco:$frescoVersion"
     implementation "com.facebook.fresco:animated-gif:$frescoVersion"
+    implementation "com.wonderkiln:camerakit:$cameraKitVersion"
 
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation("com.android.support.test.espresso:espresso-core:2.2.2", {

@@ -110,10 +110,12 @@ open class CameraFragment : PermissionsFragment() {
   }
 
   protected open fun initPermissionsView(permissionsContainer: FrameLayout) {
-    val view = LayoutInflater.from(permissionsContainer.context)
-        .inflate(R.layout.view_camera_permissions, permissionsContainer, true)
-    view.findViewById<View>(R.id.permissions_req_btn)
-        ?.setOnClickListener { requestPermissionClick() }
+    if (permissionsContainer.childCount == 0) {
+      val view = LayoutInflater.from(permissionsContainer.context)
+              .inflate(R.layout.view_camera_permissions, permissionsContainer, true)
+      view.findViewById<View>(R.id.permissions_req_btn)
+              ?.setOnClickListener { requestPermissionClick() }
+    }
   }
 
   /**
